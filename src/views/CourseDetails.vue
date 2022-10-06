@@ -73,7 +73,7 @@ export default {
 
       if (this.valid) {
         console.log("savelenebilir")
-        this.$http.post('http://localhost:8080/api/addcourse', {
+        this.$http.post('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/addcourse', {
           name: this.name,
           price: this.price
         }).then(function (data) {
@@ -88,7 +88,7 @@ export default {
 
       if (this.valid) {
         console.log("updatelenebilir")
-        this.$http.post('http://localhost:8080/api/updatecourse', {
+        this.$http.post('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/updatecourse', {
           id: this.id,
           name: this.name,
           price: this.price
@@ -103,7 +103,7 @@ export default {
     },
     deleteCourse() {
 
-      this.$http.delete('http://localhost:8080/api/deletecourse?id=' + this.id).then(function (data) {
+      this.$http.delete('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/deletecourse?id=' + this.id).then(function (data) {
         console.log(data);
       })
 

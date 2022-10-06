@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+        {"source": "/api/:path*", "destination":"https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//:path*"}
+    ]
+}

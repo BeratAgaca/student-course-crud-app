@@ -91,7 +91,7 @@ export default {
   },
   async mounted() {
     const names: string[] = [];
-    fetch('http://localhost:8080/api/courses')
+    fetch('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/courses')
       .then((res) => res.json())
       .then((data) => this.courses = data)
       .then(function (data) {
@@ -126,7 +126,7 @@ export default {
         //8 dödürdü
         console.log("selected course  : " + this.selectedCourses.length)
 
-        this.$http.post('http://localhost:8080/api/addstudent', {
+        this.$http.post('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/addstudent', {
           name: this.name,
           grade: this.grade,
           gender: this.gender,
@@ -153,7 +153,7 @@ export default {
       }
 
       if (this.valid) {
-        this.$http.post('http://localhost:8080/api/updatestudent', {
+        this.$http.post('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/updatestudent', {
           id: this.id,
           name: this.name,
           grade: this.grade,
@@ -171,7 +171,7 @@ export default {
 
     },
     deleteStudent() {   
-        this.$http.delete('http://localhost:8080/api/deletestudent?id='+this.id )   
+        this.$http.delete('https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com//api/deletestudent?id='+this.id )   
         this.deletable = !this.deletable
 
         this.clearStudent();

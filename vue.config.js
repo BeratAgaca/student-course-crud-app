@@ -9,12 +9,12 @@ module.exports = defineConfig({
     port: 3000,
     proxy: {
       '/api' : {
-          target: 'http://localhost:8080',
+          target: 'https://backend-beratagaca-dev.apps.sandbox.x8i5.p1.openshiftapps.com/',
           ws: true,
           changeOrigin: true
       }
     }
+    
   }
-
 
 })
